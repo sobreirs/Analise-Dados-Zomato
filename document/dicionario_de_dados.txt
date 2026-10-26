@@ -1,0 +1,266 @@
+DICIONARIO DE DADOS - Zomato Delivery Operations
+Dataset: Zomato Delivery Operations Analytics Dataset (Kaggle)
+ 
+Total de linhas: 45584
+Total de colunas no dataset original: 20
+Total de colunas no dataset modificado:
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: ID
+Coluna_traduzida: ID_Pedido
+Tipo: texto (identificador unico)
+Descricao: identificador unico de cada pedido
+Frente do projeto: controle tecnico (nao usada em analise direta)
+Observacoes de qualidade: 
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Delivery_person_ID
+Coluna_traduzida: ID_Entregador
+Tipo: texto (identificador unico)
+Descricao: identificador unico de cada entregador
+Frente do projeto: Entregadores
+Observacoes de qualidade: 
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Delivery_person_Age
+Coluna_traduzida: Idade_Entregador
+Tipo: numerico (inteiro)
+Descricao: idade do entregador no momento do pedido
+Frente do projeto: Entregadores
+Observacoes de qualidade: 
+    - 1854 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Delivery_person_Ratings
+Coluna_traduzida: Avaliacao_Entregador
+Tipo: numerico (decimal)
+Descricao: avaliacao media do entregador, em escala de 1 a 5
+Frente do projeto: Entregadores
+Observacoes de qualidade: 
+    - 1908 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Restaurant_latitude
+Coluna_traduzida: Latitude_Restaurante
+Tipo: numerico (decimal)
+Descricao: coordenada de latitude do restaurante de origem do pedido
+Frente do projeto: Ciclo de Entrega (base para calculo de distancia)
+Observacoes de qualidade: 
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Restaurant_longitude
+Coluna_traduzida: Longitude_Restaurante
+Tipo: numerico (decimal)
+Descricao: coordenada de longitude do restaurante de origem do pedido
+Frente do projeto: Ciclo de Entrega (base para calculo de distancia)
+Observacoes de qualidade: 
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Delivery_location_latitude
+Coluna_traduzida: Latitude_Entrega
+Tipo: numerico (decimal)
+Descricao: coordenada de latitude do local de entrega
+Frente do projeto: Ciclo de Entrega (base para calculo de distancia)
+Observacoes de qualidade: 
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Delivery_location_longitude
+Coluna_traduzida: Longitude_Entrega
+Tipo: numerico (decimal)
+Descricao: coordenada de longitude do local de entrega
+Frente do projeto: Ciclo de Entrega (base para calculo de distancia)
+Observacoes de qualidade: 
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Order_Date
+Coluna_traduzida: Data_Pedido
+Tipo: data
+Descricao: data em que o pedido foi realizado
+Frente do projeto: Panorama Operacional (evolucao no tempo)
+Observacoes de qualidade: 
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Time_Orderd
+Coluna_traduzida: Horario_Pedido
+Tipo: hora
+Descricao: horario em que o pedido foi feito pelo cliente
+Frente do projeto: Ciclo de Entrega (horario de pico)
+Observacoes de qualidade:
+    - 1731 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Time_Order_picked
+Coluna_traduzida: Horario_Coleta
+Tipo: hora
+Descricao: horario em que o entregador coletou o pedido no restaurante
+Frente do projeto: Ciclo de Entrega (tempo de coleta)
+Observacoes de qualidade: 
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Weather_conditions
+Coluna_traduzida: Condicao_Climatica
+Tipo: categorico (texto)
+Descricao: condicao climatica no momento da entrega
+Frente do projeto: Qualidade e Condicoes Externas
+Observacoes de qualidade: 
+    - 616 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Road_traffic_density
+Coluna_traduzida: Densidade_Transito
+Tipo: categorico (texto)
+Descricao: nivel de transito no trajeto da entrega
+Frente do projeto: Qualidade e Condicoes Externas
+Observacoes de qualidade:
+    -  601 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Vehicle_condition
+Coluna_traduzida: Condicao_Veiculo
+Tipo: categorico (codigo numerico)
+Descricao: condicao do veiculo do entregador, representada por codigo numerico
+Frente do projeto: Qualidade e Condicoes Externas
+Observacoes de qualidade:
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Type_of_order
+Coluna_traduzida: Tipo_Pedido
+Tipo: categorico (texto)
+Descricao: categoria do pedido (ex: lanche, bebida, refeicao)
+Frente do projeto: Panorama Operacional
+Observacoes de qualidade:
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Type_of_vehicle
+Coluna_traduzida: Tipo_Veiculo
+Tipo: categorico (texto)
+Descricao: tipo de veiculo usado pelo entregador (moto, bicicleta, scooter eletrica, etc.)
+Frente do projeto: Entregadores / Ciclo de Entrega
+Observacoes de qualidade:
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: multiple_deliveries
+Coluna_traduzida: Entregas_Simultaneas
+Tipo: numerico (inteiro)
+Descricao: numero de entregas simultaneas realizadas pelo entregador naquele pedido
+Frente do projeto: Ciclo de Entrega
+Observacoes de qualidade:
+    - 993 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Festival
+Coluna_traduzida: Festival
+Tipo: categorico (Sim/Nao)
+Descricao: indica se o pedido ocorreu em dia de festival ou feriado
+Frente do projeto: Qualidade e Condicoes Externas
+Observacoes de qualidade:
+    - 228 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: City
+Coluna_traduzida: Cidade
+Tipo: categorico (texto)
+Descricao: cidade ou tipo de area onde ocorreu a entrega
+Frente do projeto: todas as frentes
+Observacoes de qualidade:
+    - 1200 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Time_taken(min)
+Coluna_traduzida: Tempo_Entrega_Min
+Tipo: numerico (inteiro)
+Descricao: tempo total de entrega, do pedido ate a chegada ao cliente
+Frente do projeto: variavel central - usada em todas as frentes
+Observacoes de qualidade: 
+    - 0 valores nulos;
+------------------------------------------------------------------------------------------------------------------
+ 
+ 
+COLUNAS CALCULADAS (criadas durante o projeto, nao existem no dataset original)
+
+
+------------------------------------------------------------------------------------------------------------------
+Coluna: Dia_Semana
+Tipo: categorico (texto)
+Descricao: dia da semana derivado de Order_Date
+Frente do projeto: Panorama Operacional / Ciclo de Entrega
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Faixa_Horario_Pedido
+Tipo: categorico (texto)
+Descricao: faixa de horario do pedido (manha, almoco, tarde, jantar, noite), derivada de Time_Orderd
+Frente do projeto: Ciclo de Entrega
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Tempo_Coleta_Min
+Tipo: numerico (decimal)
+Descricao: diferenca entre Time_Order_picked e Time_Orderd
+Frente do projeto: Ciclo de Entrega
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Distancia_Km
+Tipo: numerico (decimal)
+Descricao: distancia entre restaurante e local de entrega, calculada a partir das coordenadas de latitude/longitude
+Frente do projeto: Ciclo de Entrega (eficiencia real)
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Faixa_Etaria_Entregador
+Tipo: categorico (texto)
+Descricao: faixa etaria do entregador (18-25, 26-35, 36-45, 46+), derivada de Delivery_person_Age
+Frente do projeto: Entregadores
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Faixa_Avaliacao
+Tipo: categorico (texto)
+Descricao: faixa de avaliacao do entregador (abaixo de 4.0, 4.0-4.5, acima de 4.5), derivada de Delivery_person_Ratings
+Frente do projeto: Entregadores
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Dentro_SLA
+Tipo: categorico (Sim/Nao)
+Descricao: indica se a entrega ficou dentro do limite de tempo aceitavel definido para o projeto
+Frente do projeto: Ciclo de Entrega
+------------------------------------------------------------------------------------------------------------------
+ 
+------------------------------------------------------------------------------------------------------------------
+Coluna: Combinacao_Clima_Transito
+Tipo: categorico (texto)
+Descricao: combinacao entre Weather_conditions e Road_traffic_density, usada no mapa de risco operacional
+Frente do projeto: Qualidade e Condicoes Externas
+------------------------------------------------------------------------------------------------------------------

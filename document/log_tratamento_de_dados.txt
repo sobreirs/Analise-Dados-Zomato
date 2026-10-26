@@ -1,0 +1,410 @@
+=========================================================
+LOG DE TRATAMENTO DE DADOS
+Projeto: Zomato
+Dataset: Zomato Delivery Operations Analytics Dataset
+Data de início da análise: 08/07/2026
+Responsável: Matheus Sobreira
+=========================================================
+
+Legenda:
+[PENDENTE]     Problema identificado, ainda não tratado.
+[EM ANÁLISE]   Avaliando a melhor abordagem.
+[CONCLUÍDO]    Tratamento realizado.
+[NÃO APLICADO] Não foi necessário tratar.
+
+=========================================================
+
+=========================================================
+
+COLUNA: ID
+---------------------------------------------------------
+Problema identificado:
+-
+
+Tratamento planejado:
+-
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Delivery_person_ID
+---------------------------------------------------------
+Problema identificado:
+
+Tratamento planejado:
+
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Delivery_person_Age
+---------------------------------------------------------
+Problema identificado:
+- Há valores nulos que representam cerca de 4% do dataset
+- Tem 38 linhas com idade abaixo de 18 anos
+
+Tratamento planejado:
+- Calcular a mediana e inserir os dados nos valores nulos
+- Transformar as idades em NAAN para depois calcular a mediana
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Delivery_person_Ratings
+---------------------------------------------------------
+Problema identificado:
+- Há valores nulos que representam cerca de 4% do dataset
+- Notas acima de 5
+
+Tratamento planejado:
+- Verificar o que fazer com valores nulos
+- Avaliar o que fazer com notas inválidas
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+- Será necessário validar os dados após a transformação
+
+=========================================================
+
+COLUNA: Restaurant_latitude
+---------------------------------------------------------
+Problema identificado:
+- Valores impossíveis para as cordenadas
+
+Tratamento planejado:
+- Tratar os valores incorretos
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+- Será necessário validar os dados após a transformação
+
+=========================================================
+
+COLUNA: Restaurant_longitude
+---------------------------------------------------------
+Problema identificado:
+- Valores impossíveis para as cordenadas
+
+Tratamento planejado:
+- Converter em abs pois possivelmente é erro de digitação
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Delivery_location_latitude
+---------------------------------------------------------
+Problema identificado:
+- Valores impossíveis para as cordenadas
+
+Tratamento planejado:
+- Converter em abs pois possivelmente é erro de digitação
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Delivery_location_longitude
+---------------------------------------------------------
+Problema identificado:
+- Valores impossíveis para as cordenadas
+
+Tratamento planejado:
+- Converter em abs pois possivelmente é erro de digitação
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Order_Date
+---------------------------------------------------------
+Problema identificado:
+- Verificar se existem datas no futuro ou bem antigas
+- Data com tipo OBJECT
+
+Tratamento planejado:
+- Avaliar o que fazer com datas impossíveis
+- Converter para o tipo DATETIME
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Time_Orderd
+---------------------------------------------------------
+Problema identificado:
+- Time está como tipo OBJECT
+- Há valores nulos
+- Verificar se existem datas no futuro ou bem antigas
+
+Tratamento planejado:
+- Converter para o time TIME
+- Verificar o que fazer com valores nulos
+- Avaliar o que fazer com horários impossíveis
+
+Justificativa:
+- DELETANDO OS VALORES NULOS VISTO QUE A COLUNA É DE EXTREMA IMPORTÂNCIA PARA ANÁLISE
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Time_Order_picked
+---------------------------------------------------------
+Problema identificado:
+- Há valores nulos
+- Time está como tipo OBJECT
+
+Tratamento planejado:
+- Converter para o time TIME
+- Verificar o que fazer com valores nulos
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Weather_conditions
+---------------------------------------------------------
+Problema identificado:
+-
+
+Tratamento planejado:
+-
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Road_traffic_density
+---------------------------------------------------------
+Problema identificado:
+-
+
+Tratamento planejado:
+-
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Vehicle_condition
+---------------------------------------------------------
+Problema identificado:
+- Valores vindo como INT, porém, não sabemos o que significa cada número
+
+Tratamento planejado:
+- Identificar o que cada número significa
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Type_of_order
+---------------------------------------------------------
+Problema identificado:
+-
+
+Tratamento planejado:
+-
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Type_of_vehicle
+---------------------------------------------------------
+Problema identificado:
+-
+
+Tratamento planejado:
+-
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: multiple_deliveries
+---------------------------------------------------------
+Problema identificado:
+- Não sabemmos que significa cada valor
+- Valor vindo como FLOAT
+
+Tratamento planejado:
+- Identificar a traduzir o que significa cada valor númerico
+- Transformar em INT
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Festival
+---------------------------------------------------------
+Problema identificado:
+-
+
+Tratamento planejado:
+-
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: City
+---------------------------------------------------------
+Problema identificado:
+- há 1200 valores nulos
+
+Tratamento planejado:
+- Avaliar o que fazer com valores nulos
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
+
+COLUNA: Time_taken (min)
+---------------------------------------------------------
+Problema identificado:
+-
+
+Tratamento planejado:
+-
+
+Justificativa:
+-
+
+Status:
+[CONCLUÍDO]
+
+Observações:
+-
+
+=========================================================
